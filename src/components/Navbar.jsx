@@ -14,15 +14,18 @@ import avatar from "assets/girl.jpg";
 import { useTheme } from "@emotion/react";
 import { AppBar, IconButton, InputBase, Toolbar } from "@mui/material";
 
-const Navbar = () => {
+const Navbar = ({
+  isSidebarOpen,
+  setIsSidebarOpen
+}) => {
   const dispatch = useDispatch();
   const theme = useTheme();
 
   return (
-    <AppBar sx={{position: 'static', width:'100vw', background: "none", boxShadow: "none" }}>
+    <AppBar sx={{position: 'static', background: "none", boxShadow: "none" }}>
       <Toolbar sx={{ justifyContent: "space-between" }}>
         <FlexBetween>
-          <IconButton onClick={() => console.log("ddd")}>
+          <IconButton onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
             <Menu />
           </IconButton>
           <FlexBetween
