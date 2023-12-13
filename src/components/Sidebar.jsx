@@ -51,6 +51,7 @@ const navItems = [
 ];
 
 const Sidebar = ({
+  user,
   isNonMobile,
   drawerWidth,
   isSidebarOpen,
@@ -119,24 +120,68 @@ const Sidebar = ({
                         navigate(`/${lcTxt}`);
                       }}
                       sx={{
-                        backgroundColor: active === lcTxt ? theme.palette.secondary[300] : "transparent",
-                        color: active === lcTxt ? theme.palette.primary[600] : theme.palette.secondary[100]
+                        backgroundColor:
+                          active === lcTxt
+                            ? theme.palette.secondary[300]
+                            : "transparent",
+                        color:
+                          active === lcTxt
+                            ? theme.palette.primary[600]
+                            : theme.palette.secondary[100],
                       }}
                     >
-                      <ListItemIcon 
-                      sx={{ml:'2rem', 
-                      color: active === lcTxt ? theme.palette.primary[600] : theme.palette.secondary[200]}}>
+                      <ListItemIcon
+                        sx={{
+                          ml: "2rem",
+                          color:
+                            active === lcTxt
+                              ? theme.palette.primary[600]
+                              : theme.palette.secondary[200],
+                        }}
+                      >
                         {icon}
                       </ListItemIcon>
                       <ListItemText primary={text} />
                       {active === lcTxt && (
-                        <ChevronRightOutlined sx={{ml: 'auto'}} />
+                        <ChevronRightOutlined sx={{ ml: "auto" }} />
                       )}
                     </ListItemButton>
                   </ListItem>
                 );
               })}
             </List>
+          </Box>
+          <Box position="absolute" bottom="2rem">
+            <Divider />
+            <FlexBetween textTransform="none" gap="1rem" m="1.5rem 2rem 0 3rem">
+              <Box
+                component="img"
+                alt="profile"
+                src={avatar}
+                height="40px"
+                widht="40px"
+                borderRadius="50%"
+                sx={{ objectFit: "cover" }}
+              />
+              <Box textAlign="left">
+                <Typography
+                  fontWeight="bold"
+                  fontSize="0.9rem"
+                  sx={{ color: theme.palette.secondary[300] }}
+                >
+                  {user.name}
+                </Typography>
+                <Typography
+                  fontSize="0.8rem"
+                  sx={{ color: theme.palette.secondary[200] }}
+                >
+                  {user.occupation}
+                </Typography>
+              </Box>
+              <SettingsOutlined
+                sx={{ color: theme.palette.secondary[3], fontSize: "25px" }}
+              />
+            </FlexBetween>
           </Box>
         </Drawer>
       )}
