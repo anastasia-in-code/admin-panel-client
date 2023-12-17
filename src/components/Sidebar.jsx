@@ -39,7 +39,7 @@ const navItems = [
   { text: "Products", icon: <ShoppingCartOutlined /> },
   { text: "Customers", icon: <Groups2Outlined /> },
   { text: "Transactions", icon: <ReceiptLongOutlined /> },
-  { text: "Geograpjy", icon: <PublicOutlined /> },
+  { text: "Geography", icon: <PublicOutlined /> },
   { text: "Sales", icon: null },
   { text: "Overview", icon: <PointOfSaleOutlined /> },
   { text: "Daily", icon: <TodayOutlined /> },
