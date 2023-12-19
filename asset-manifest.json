@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/admin-panel-client/static/css/main.fcde6899.css",
+    "main.js": "/admin-panel-client/static/js/main.228b5dbe.js",
+    "static/media/girl1.png": "/admin-panel-client/static/media/girl1.eb4e9ff717d431bc890f.png",
+    "index.html": "/admin-panel-client/index.html",
+    "main.fcde6899.css.map": "/admin-panel-client/static/css/main.fcde6899.css.map",
+    "main.228b5dbe.js.map": "/admin-panel-client/static/js/main.228b5dbe.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fcde6899.css",
+    "static/js/main.228b5dbe.js"
+  ]
+}
